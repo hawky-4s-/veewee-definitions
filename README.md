@@ -34,7 +34,7 @@ Build the VM:
 
 Export the VM to a Vagrant .box file:
 
-    $ bundle exec veewee vbox export debian-6.0.7
+    $ bundle exec veewee vbox export --force debian-6.0.7
 
 Add the box to Vagrant (delete old one if present):
 
@@ -45,6 +45,7 @@ Use the box:
 
     $ vagrant init debian-6.0.7
     $ vagrant up
+    $ vagrant ssh
 
 
 Authors
