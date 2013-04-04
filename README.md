@@ -36,8 +36,9 @@ Export the VM to a Vagrant .box file:
 
     $ bundle exec veewee vbox export debian-6.0.7
 
-Add the box to Vagrant:
+Add the box to Vagrant (delete old one if present):
 
+    $ vagrant box remove debian-6.0.7 virtualbox
     $ vagrant box add debian-6.0.7 debian-6.0.7.box
 
 Use the box:
