@@ -11,7 +11,7 @@ Installation
     $ git clone git://github.com/jedi4ever/veewee.git
     $ cd veewee/
     $ bundle install
-    $ git clone THIS_REPO definitions
+    $ git clone git@github.com:Jimdo/veewee-definitions.git definitions
 
 
 Usage
