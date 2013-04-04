@@ -19,7 +19,7 @@ Usage
 
 Here is how to build a Vagrant base box for Debian.
 
-**Note: You can also use build-box.sh to automate the steps below.**
+**Note: You can also use build-box.sh and add-box.sh to automate the steps below.**
 
 List available VirtualBox templates:
 
