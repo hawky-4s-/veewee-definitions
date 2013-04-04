@@ -30,7 +30,7 @@ Define a new VM based on the Debian-6.0.7 template:
 
 Build the VM:
 
-    $ bundle exec veewee vbox build debian-6.0.7
+    $ bundle exec veewee vbox build --force --nogui debian-6.0.7
 
 Export the VM to a Vagrant .box file:
 
