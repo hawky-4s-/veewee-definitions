@@ -17,7 +17,9 @@ Installation
 Usage
 -----
 
-Here is how to build a Vagrant base box for Debian:
+Here is how to build a Vagrant base box for Debian.
+
+**Note: You can also use build-box.sh to automate the steps below.**
 
 List available VirtualBox templates:
 
