@@ -3,16 +3,16 @@
 # Usage: build-box.sh <box definition>
 # Writtten by Mathias Lafeldt <mlafeldt@jimdo.com>
 
-set -e
+set -e -x
 
 BOX="${1:?box definition missing}"
 
-# Show commands
-set -x
+# Global Veewee build options
+export VEEWEE_PUPPET_VERSION="2.7.19"
+export VEEWEE_CHEF_VERSION="10.24.0"
 
+# Build Vagrant box with Veewee
 cd ..
-
-# Build box
-bundle install
+bundle install --quiet
 bundle exec veewee vbox build --force --nogui "$BOX"
 bundle exec veewee vbox export --force "$BOX"
