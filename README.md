@@ -20,18 +20,18 @@ Usage
 To build a Vagrant base box, use the `build-box.sh` script that comes with this
 repository. Simply pass it the name of the box definition you want to build.
 
-For example, to build a _debian-6.0.7_ box:
+For example, to build a Debian 6.0.7 box:
 
     $ cd definitions/
-    $ ./build-box.sh debian-6.0.7
+    $ ./build-box.sh jimdo-debian-6.0.7
 
 When done, you might want to add the new box to your locally installed Vagrant
 boxes for testing. Use the `add-box.sh` script for this.
 
-    $ ./add-box.sh debian-6.0.7
+    $ ./add-box.sh jimdo-debian-6.0.7
 
 Last but not least, upload the final Vagrant box to S3, e.g. to
-`https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/debian-6.0.7.box`.
+`https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/jimdo-debian-6.0.7.box`.
 
 Please document new boxes and updates to existing ones in `CHANGELOG.md`.
 
@@ -47,26 +47,26 @@ List available VirtualBox templates:
     $ cd veewee/
     $ bundle exec veewee vbox templates
 
-Define a new VM based on the, say, Debian-6.0.7 template:
+Define a new VM based on a, say, Debian 6.0.7 template:
 
-    $ bundle exec veewee vbox define debian-6.0.7 Debian-6.0.7-amd64-netboot
+    $ bundle exec veewee vbox define jimdo-debian-6.0.7 debian-6.0.7-amd64-netboot
 
 Build the VM:
 
-    $ bundle exec veewee vbox build --force --nogui debian-6.0.7
+    $ bundle exec veewee vbox build --force jimdo-debian-6.0.7
 
 Export the VM to a Vagrant .box file:
 
-    $ bundle exec veewee vbox export --force debian-6.0.7
+    $ bundle exec veewee vbox export --force jimdo-debian-6.0.7
 
 Add the box to Vagrant (delete old one if present):
 
-    $ vagrant box remove debian-6.0.7 virtualbox
-    $ vagrant box add debian-6.0.7 debian-6.0.7.box
+    $ vagrant box remove jimdo-debian-6.0.7 virtualbox
+    $ vagrant box add jimdo-debian-6.0.7 jimdo-debian-6.0.7.box
 
 Use the box:
 
-    $ vagrant init debian-6.0.7
+    $ vagrant init jimdo-debian-6.0.7
     $ vagrant up
     $ vagrant ssh
 
@@ -76,8 +76,8 @@ Downloadable Boxes
 
 These are the Vagrant boxes we've built:
 
-- debian-6.0.7: <https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/debian-6.0.7.box>
-- ubuntu-12.10: <https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/ubuntu-12.10.box>
+- jimdo-debian-6.0.7: <https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/jimdo-debian-6.0.7.box>
+- jimdo-ubuntu-12.10: <https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/jimdo-ubuntu-12.10.box>
 
 
 Authors
