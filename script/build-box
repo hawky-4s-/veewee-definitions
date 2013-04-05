@@ -1,6 +1,6 @@
 #!/bin/sh
 # Build Vagrant base box using Veewee
-# Usage: build-box.sh <box definition>
+# Usage: build-box <box definition>
 # Writtten by Mathias Lafeldt <mlafeldt@jimdo.com>
 
 set -e -x

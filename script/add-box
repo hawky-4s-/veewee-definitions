@@ -1,6 +1,6 @@
 #!/bin/sh
 # Add base box to Vagrant
-# Usage: add-box.sh <box definition>
+# Usage: add-box <box definition>
 # Writtten by Mathias Lafeldt <mlafeldt@jimdo.com>
 
 set -e -x
