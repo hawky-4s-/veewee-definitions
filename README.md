@@ -80,6 +80,12 @@ These are the Vagrant boxes we've built:
 - jimdo-ubuntu-12.10: <https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/jimdo-ubuntu-12.10.box>
 
 
+License
+-------
+
+This project is licensed under the terms of the MIT License. See LICENSE file.
+
+
 Authors
 -------
 
