@@ -7,6 +7,13 @@ set -e -x
 
 BOX="${1:?box definition missing}"
 
-vagrant box remove "$BOX" virtualbox || true
+# Check if Vagrant version has provider support
+PROVIDER=
+vagrant box remove -h | grep -q provider && PROVIDER=virtualbox
+
+# Add box to Vagrant (delete old one first)
+vagrant box remove "$BOX" $PROVIDER || true
 vagrant box add "$BOX" "../$BOX.box"
+
+# List all boxes
 vagrant box list
