@@ -77,6 +77,7 @@ Downloadable Boxes
 These are the Vagrant boxes we've built:
 
 - debian-6.0.7: <https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/debian-6.0.7.box>
+- ubuntu-12.10: <https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/ubuntu-12.10.box>
 
 
 Authors
