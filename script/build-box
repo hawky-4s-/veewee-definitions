@@ -13,6 +13,5 @@ export VEEWEE_CHEF_VERSION="10.24.0"
 
 # Build Vagrant box with Veewee
 cd ..
-bundle install --quiet
 bundle exec veewee vbox build --force "$BOX"
 bundle exec veewee vbox export --force "$BOX"
