@@ -17,16 +17,37 @@ Installation
 Usage
 -----
 
-Here is how to build a Vagrant base box for Debian.
+To build a Vagrant base box, use the `build-box.sh` script that comes with this
+repository. Simply pass it the name of the box definition you want to build.
 
-**Note: You can also use build-box.sh and add-box.sh to automate the steps below.**
+For example, to build a _debian-6.0.7_ box:
+
+    $ cd definitions/
+    $ ./build-box.sh debian-6.0.7
+
+When done, you might want to add the new box to your locally installed Vagrant
+boxes for testing. Use the `add-box.sh` script for this.
+
+    $ ./add-box.sh debian-6.0.7
+
+Last but not least, upload the final Vagrant box to S3, e.g. to
+`https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/debian-6.0.7.box`.
+
+Please document new boxes and updates to existing ones in `CHANGELOG.md`.
+
+
+Veewee
+------
+
+In case you're interested in using Veewee as-is without those fancy scripts
+above, here is how to do it.
 
 List available VirtualBox templates:
 
     $ cd veewee/
     $ bundle exec veewee vbox templates
 
-Define a new VM based on the Debian-6.0.7 template:
+Define a new VM based on the, say, Debian-6.0.7 template:
 
     $ bundle exec veewee vbox define debian-6.0.7 Debian-6.0.7-amd64-netboot
 
