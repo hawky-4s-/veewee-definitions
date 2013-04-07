@@ -31,7 +31,7 @@ boxes for testing. Use the `add-box.sh` script for this.
     $ ./add-box.sh jimdo-debian-6.0.7
 
 Last but not least, upload the final Vagrant box to S3, e.g. to
-`https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/jimdo-debian-6.0.7.box`.
+`https://jimdo-vagrant-boxes.s3.amazonaws.com/jimdo-debian-6.0.7.box`.
 
 Please document new boxes and updates to existing ones in `CHANGELOG.md`.
 
@@ -76,8 +76,8 @@ Downloadable Boxes
 
 These are the Vagrant boxes we've built:
 
-- jimdo-debian-6.0.7: <https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/jimdo-debian-6.0.7.box>
-- jimdo-ubuntu-12.10: <https://s3-eu-west-1.amazonaws.com/jimdo-vagrant-boxes/jimdo-ubuntu-12.10.box>
+* [jimdo-debian-6.0.7](https://jimdo-vagrant-boxes.s3.amazonaws.com/jimdo-debian-6.0.7.box)
+* [jimdo-ubuntu-12.10](https://jimdo-vagrant-boxes.s3.amazonaws.com/jimdo-ubuntu-12.10.box)
 
 
 License
