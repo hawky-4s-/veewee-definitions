@@ -10,25 +10,26 @@ Installation
 
     $ git clone git://github.com/jedi4ever/veewee.git
     $ cd veewee/
-    $ bundle install
     $ git clone git@github.com:Jimdo/veewee-definitions.git definitions
+    $ cd definitions/
+    $ ./script/bootstrap
 
 
 Usage
 -----
 
-To build a Vagrant base box, use the `build-box.sh` script that comes with this
+To build a Vagrant base box, use the `build-box` script that comes with this
 repository. Simply pass it the name of the box definition you want to build.
 
 For example, to build a Debian 6.0.7 box:
 
     $ cd definitions/
-    $ ./build-box.sh jimdo-debian-6.0.7
+    $ ./script/build-box jimdo-debian-6.0.7
 
 When done, you might want to add the new box to your locally installed Vagrant
-boxes for testing. Use the `add-box.sh` script for this.
+boxes for testing. Use the `add-box` script for this.
 
-    $ ./add-box.sh jimdo-debian-6.0.7
+    $ ./script/add-box jimdo-debian-6.0.7
 
 Last but not least, upload the final Vagrant box to S3, e.g. to
 `https://jimdo-vagrant-boxes.s3.amazonaws.com/jimdo-debian-6.0.7.box`.

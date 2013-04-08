@@ -1,0 +1,22 @@
+#!/bin/sh
+# Add base box to Vagrant
+# Usage: add-box <box definition>
+# Writtten by Mathias Lafeldt <mlafeldt@jimdo.com>
+
+set -e -x
+
+BOX="${1:?box definition missing}"
+
+APP_ROOT="$(cd -P -- "$(dirname -- "$0")/../.." && pwd)"
+cd "$APP_ROOT"
+
+# Check if Vagrant version has provider support
+PROVIDER=
+vagrant box remove -h | grep -q provider && PROVIDER=virtualbox
+
+# Add box to Vagrant (delete old one first)
+vagrant box remove "$BOX" $PROVIDER || true
+vagrant box add "$BOX" "$BOX.box"
+
+# List all boxes
+vagrant box list
