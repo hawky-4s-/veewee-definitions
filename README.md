@@ -34,8 +34,10 @@ boxes for testing. Use the `add-box` script for this.
 
     $ ./script/add-box jimdo-debian-6.0.7
 
-Last but not least, upload the final Vagrant box to S3, e.g. to
-`https://jimdo-vagrant-boxes.s3.amazonaws.com/jimdo-debian-6.0.7.box`.
+If you think the Vagrant box is worth sharing, use the `upload-box` script to
+upload it to S3 (set `AWS_S3_BUCKET` to your bucket name).
+
+    $ ./script/upload-box jimdo-debian-6.0.7
 
 Please document new boxes and updates to existing ones in `CHANGELOG.md`.
 
