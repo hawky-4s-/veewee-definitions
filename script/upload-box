@@ -1,0 +1,16 @@
+#!/bin/sh
+# Upload Vagrant base box to S3
+# Usage: upload-box <box definition>
+# Writtten by Mathias Lafeldt <mlafeldt@jimdo.com>
+
+set -e
+
+BOX="${1:?box definition missing}"
+
+: ${AWS_S3_BUCKET:=jimdo-vagrant-boxes}
+: ${AWS_S3_OPTS:=--acl-public}
+
+APP_ROOT="$(cd -P -- "$(dirname -- "$0")/../.." && pwd)"
+cd "$APP_ROOT"
+
+exec s3cmd put $AWS_S3_OPTS "$BOX.box" "s3://$AWS_S3_BUCKET"
