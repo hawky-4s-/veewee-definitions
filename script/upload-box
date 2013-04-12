@@ -13,4 +13,6 @@ BOX="${1:?box definition missing}"
 APP_ROOT="$(cd -P -- "$(dirname -- "$0")/../.." && pwd)"
 cd "$APP_ROOT"
 
+set -x
+
 exec s3cmd put $AWS_S3_OPTS "$BOX.box" "s3://$AWS_S3_BUCKET"

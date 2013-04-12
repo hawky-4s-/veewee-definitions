@@ -3,7 +3,7 @@
 # Usage: add-box <box definition>
 # Writtten by Mathias Lafeldt <mlafeldt@jimdo.com>
 
-set -e -x
+set -e
 
 BOX="${1:?box definition missing}"
 
@@ -13,6 +13,8 @@ cd "$APP_ROOT"
 # Check if Vagrant version has provider support
 PROVIDER=
 vagrant box remove -h | grep -q provider && PROVIDER=virtualbox
+
+set -x
 
 # Add box to Vagrant (delete old one first)
 vagrant box remove "$BOX" $PROVIDER || true
