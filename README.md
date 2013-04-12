@@ -1,8 +1,12 @@
 Jimdo Veewee Definitions
 ========================
 
-This repository contains the [veewee](https://github.com/jedi4ever/veewee/)
-definitions we use to build our Vagrant base boxes.
+This repository contains the [Veewee](https://github.com/jedi4ever/veewee/)
+definitions and some convenient scripts we use at Jimdo to build our Vagrant
+base boxes.
+
+Feel free to fork this repository and use it as the basis for your own Vagrant
+base boxes.
 
 
 Installation
@@ -23,7 +27,6 @@ repository. Simply pass it the name of the box definition you want to build.
 
 For example, to build a Debian 6.0.7 box:
 
-    $ cd definitions/
     $ ./script/build-box jimdo-debian-6.0.7
 
 When done, you might want to add the new box to your locally installed Vagrant
@@ -60,9 +63,9 @@ Export the VM to a Vagrant .box file:
 
     $ bundle exec veewee vbox export --force jimdo-debian-6.0.7
 
-Add the box to Vagrant (delete old one if present):
+Add the box to Vagrant (if there's already a box with the same name, you have to
+delete it first):
 
-    $ vagrant box remove jimdo-debian-6.0.7 virtualbox
     $ vagrant box add jimdo-debian-6.0.7 jimdo-debian-6.0.7.box
 
 Use the box:
