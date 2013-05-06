@@ -83,6 +83,7 @@ Downloadable Boxes
 These are the Vagrant boxes we've built:
 
 * [jimdo-debian-6.0.7](https://jimdo-vagrant-boxes.s3.amazonaws.com/jimdo-debian-6.0.7.box)
+* [jimdo-debian-7.0.0](https://jimdo-vagrant-boxes.s3.amazonaws.com/jimdo-debian-7.0.0.box)
 * [jimdo-ubuntu-12.10](https://jimdo-vagrant-boxes.s3.amazonaws.com/jimdo-ubuntu-12.10.box)
 
 
