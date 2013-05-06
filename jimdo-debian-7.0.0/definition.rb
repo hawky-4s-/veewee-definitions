@@ -2,8 +2,8 @@
 
 Veewee::Definition.declare({
   :cpu_count => '1',
-  :memory_size=> '256',
-  :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'off',
+  :memory_size=> '384',
+  :disk_size => '40960', :disk_format => 'VDI', :hostiocache => 'off',
   :os_type_id => 'Debian_64',
   :iso_file => "debian-7.0.0-amd64-netinst.iso",
   :iso_src => "http://cdimage.debian.org/cdimage/release/7.0.0/amd64/iso-cd/debian-7.0.0-amd64-netinst.iso",
